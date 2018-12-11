@@ -1,0 +1,20 @@
+.skills {
+  grid-column: col-start 5 / center-end;
+  color: $color-md-grey;
+  margin-top: 5rem;
+
+  &__list {
+    list-style: none;
+    border-top: 1px solid $color-light-grey;
+    border-left: 1px solid $color-light-grey;
+    border-right: 1px solid $color-light-grey;
+    margin-top: 2rem;
+
+    &--item {
+      border-bottom: 1px solid $color-light-grey;
+      padding: 2rem;
+      font-size: 1.6rem;
+      color: $color-md-grey;
+    }
+  }
+}

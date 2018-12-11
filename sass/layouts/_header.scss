@@ -1,0 +1,63 @@
+.header {
+  grid-column: center-start / center-end;
+  background-color: $color-light-grey;
+  background-image: linear-gradient(
+      rgba($color-primary, 0.7),
+      rgba($color-primary-dark, 0.9)
+    ),
+    url(../../img/header_img.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5rem;
+
+  &__img {
+    width: 25rem;
+    height: 25rem;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+
+    border-radius: 50%;
+  }
+
+  h1,
+  h4,
+  hr,
+  p {
+    text-align: center;
+    margin-bottom: 2.25rem;
+  }
+
+  &-span {
+    font-size: 1.8rem;
+  }
+
+  button {
+    width: 25rem;
+    // height: 15rem;
+    padding: 1.5rem;
+    border: 1px solid $color-light-grey;
+    border-radius: 0.2rem;
+
+    margin: 0 auto;
+    background-color: transparent;
+    transition: all 0.2s;
+  }
+
+  button:hover {
+    background-color: white;
+
+    cursor: pointer;
+
+    a {
+      color: $color-primary;
+    }
+  }
+
+  hr {
+    filter: brightness(40%);
+  }
+}
