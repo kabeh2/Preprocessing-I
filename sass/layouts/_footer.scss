@@ -1,0 +1,12 @@
+footer {
+  grid-column: center-start / center-end;
+  background-color: $color-md-grey;
+
+  p {
+    text-align: center;
+    color: white;
+    font-size: 1.4rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}

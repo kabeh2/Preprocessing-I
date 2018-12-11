@@ -1,0 +1,52 @@
+.history {
+  display: grid;
+  grid-column: center-start / center-end;
+  color: $color-md-grey;
+  margin-bottom: 5rem;
+  margin-top: 5rem;
+
+  &__header,
+  &__item1,
+  &__item2,
+  &__item3 {
+    display: grid;
+    grid-template-columns: [yrs-start] 10vw [yrs-end company-start] 30vw [company-end title-start] 40vw [title-end tech-start] 20vw [tech-end];
+    font-size: 1.6rem;
+    font-weight: bold;
+    border-top: 1px solid $color-light-grey;
+    border-bottom: 2px solid $color-md-grey;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-top: 2rem;
+
+    &--yrs {
+      grid-column: yrs-start / yrs-end;
+    }
+    &--company {
+      grid-column: company-start / company-end;
+    }
+    &--title {
+      grid-column: title-start / title-end;
+    }
+    &--tech {
+      grid-column: tech-start / tech-end;
+    }
+  }
+
+  &__item1,
+  &__item2,
+  &__item3 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    border-top: none;
+    border-bottom: 1px solid $color-light-grey;
+    margin-top: 0;
+    color: $color-md-grey;
+  }
+
+  &__item1,
+  &__item3 {
+    background-color: $color-primary;
+    // height: 100%;
+  }
+}

@@ -144,9 +144,176 @@ html,
 body {
   height: 100%; }
 
+.navbar {
+  grid-column: 1/-1;
+  padding: 2rem 8rem;
+  height: auto; }
+
+.nav {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(4rem, max-content));
+  justify-content: end;
+  color: grey; }
+  .nav__link:link, .nav__link:visited {
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    padding-left: 2.5rem;
+    display: block;
+    transition: all 0.2s; }
+  .nav__link:hover, .nav__link:active {
+    transform: translateY(-3px);
+    color: #55c57a;
+    font-weight: bold; }
+
 h1 {
-  background-color: gold;
-  border: 2px solid red;
-  text-align: center;
   font-family: lato;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  line-height: 1; }
+
+h2 {
+  font-size: 2.45rem; }
+
+h3 {
+  font-size: 2rem;
+  font-weight: bold; }
+
+h4 {
   font-size: 1.8rem; }
+
+p {
+  font-size: 1.6rem; }
+
+a {
+  text-decoration: none;
+  color: lightgrey;
+  font-size: 1.6rem; }
+
+body {
+  font-family: lato;
+  color: lightgrey;
+  font-weight: 300;
+  line-height: 1.6; }
+
+.container {
+  display: grid;
+  grid-template-rows: min-content max-content max-content repeat(2, max-content);
+  grid-template-columns: [full-start] minmax(min-content, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(min-content, 1fr) [full-end]; }
+
+.header {
+  grid-column: center-start / center-end;
+  background-color: lightgrey;
+  background-image: linear-gradient(rgba(85, 197, 122, 0.7), rgba(0, 0, 0, 0.9)), url(../../img/header_img.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5rem; }
+  .header__img {
+    width: 25rem;
+    height: 25rem;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    border-radius: 50%; }
+  .header h1,
+  .header h4,
+  .header hr,
+  .header p {
+    text-align: center;
+    margin-bottom: 2.25rem; }
+  .header-span {
+    font-size: 1.8rem; }
+  .header button {
+    width: 25rem;
+    padding: 1.5rem;
+    border: 1px solid lightgrey;
+    border-radius: 0.2rem;
+    margin: 0 auto;
+    background-color: transparent;
+    transition: all 0.2s; }
+  .header button:hover {
+    background-color: white;
+    cursor: pointer; }
+    .header button:hover a {
+      color: #55c57a; }
+  .header hr {
+    filter: brightness(40%); }
+
+.bio {
+  grid-column: col-start / col-end 4;
+  padding-right: 5rem;
+  color: grey;
+  margin-top: 5rem; }
+  .bio p {
+    font-size: 1.6rem;
+    line-height: 2.625rem; }
+  .bio h2 {
+    margin-bottom: 2rem;
+    font-weight: bold; }
+
+.skills {
+  grid-column: col-start 5 / center-end;
+  color: grey;
+  margin-top: 5rem; }
+  .skills__list {
+    list-style: none;
+    border-top: 1px solid lightgrey;
+    border-left: 1px solid lightgrey;
+    border-right: 1px solid lightgrey;
+    margin-top: 2rem; }
+    .skills__list--item {
+      border-bottom: 1px solid lightgrey;
+      padding: 2rem;
+      font-size: 1.6rem;
+      color: grey; }
+
+.history {
+  display: grid;
+  grid-column: center-start / center-end;
+  color: grey;
+  margin-bottom: 5rem;
+  margin-top: 5rem; }
+  .history__header, .history__item1, .history__item2, .history__item3 {
+    display: grid;
+    grid-template-columns: [yrs-start] 10vw [yrs-end company-start] 30vw [company-end title-start] 40vw [title-end tech-start] 20vw [tech-end];
+    font-size: 1.6rem;
+    font-weight: bold;
+    border-top: 1px solid lightgrey;
+    border-bottom: 2px solid grey;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-top: 2rem; }
+    .history__header--yrs, .history__item1--yrs, .history__item2--yrs, .history__item3--yrs {
+      grid-column: yrs-start / yrs-end; }
+    .history__header--company, .history__item1--company, .history__item2--company, .history__item3--company {
+      grid-column: company-start / company-end; }
+    .history__header--title, .history__item1--title, .history__item2--title, .history__item3--title {
+      grid-column: title-start / title-end; }
+    .history__header--tech, .history__item1--tech, .history__item2--tech, .history__item3--tech {
+      grid-column: tech-start / tech-end; }
+  .history__item1, .history__item2, .history__item3 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    border-top: none;
+    border-bottom: 1px solid lightgrey;
+    margin-top: 0;
+    color: grey; }
+  .history__item1, .history__item3 {
+    background-color: #55c57a; }
+
+footer {
+  grid-column: center-start / center-end;
+  background-color: grey; }
+  footer p {
+    text-align: center;
+    color: white;
+    font-size: 1.4rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem; }

@@ -1,0 +1,38 @@
+.navbar {
+  // background-color: pink;
+  grid-column: 1/-1;
+  padding: 2rem 8rem;
+  height: auto;
+}
+
+.nav {
+  list-style: none;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(4rem, max-content));
+  // grid-gap: 1rem;
+  justify-content: end;
+  // background-color: lime;
+  color: $color-md-grey;
+
+  &__link:link,
+  &__link:visited {
+    font-size: 1.6rem;
+    font-weight: 400;
+    // color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    padding-left: 2.5rem;
+    display: block;
+    transition: all 0.2s;
+    // background-color: orangered;
+  }
+
+  &__link:hover,
+  &__link:active {
+    transform: translateY(-3px);
+    color: $color-primary;
+    font-weight: bold;
+  }
+}
